@@ -1,0 +1,140 @@
+name: StandCore
+version: 1.0.0
+main: com.standcore.StandCore
+api-version: 1.13
+authors: [StandCore]
+description: A comprehensive server management plugin
+softdepend: [PlaceholderAPI]
+
+commands:
+  grant:
+    description: Grant a rank to a player
+    usage: /grant <player>
+    permission: standcore.grant
+  grantshistory:
+    description: View grant history of a player
+    usage: /grantshistory <player>
+    permission: standcore.grantshistory
+  staff:
+    description: Toggle staff mode
+    usage: /staff
+    permission: standcore.staff
+  vanish:
+    description: Toggle invisibility in staff mode
+    usage: /vanish
+    permission: standcore.staff.vanish
+  freeze:
+    description: Freeze a player
+    usage: /freeze <player>
+    permission: standcore.staff.freeze
+  unfreeze:
+    description: Unfreeze a player
+    usage: /unfreeze <player>
+    permission: standcore.staff.freeze
+  invsee:
+    description: View a player's inventory
+    usage: /invsee <player>
+    permission: standcore.staff.invsee
+  adminchat:
+    description: Toggle admin chat mode
+    usage: /adminchat [message]
+    aliases: [ac]
+    permission: standcore.adminchat
+  vanish:
+    description: Toggle invisibility in staff mode
+    usage: /vanish
+    aliases: [v]
+    permission: standcore.staff.vanish
+  grantshistory:
+    description: View grant history of a player
+    usage: /grantshistory <player>
+    aliases: [grantshist, gh]
+    permission: standcore.grantshistory
+  ban:
+    description: Ban a player
+    usage: /ban <player> <duration> <reason>
+    permission: standcore.ban
+  mute:
+    description: Mute a player
+    usage: /mute <player> <duration> <reason>
+    permission: standcore.mute
+  kick:
+    description: Kick a player
+    usage: /kick <player> <reason>
+    permission: standcore.kick
+  warn:
+    description: Warn a player
+    usage: /warn <player> <reason>
+    permission: standcore.warn
+  unban:
+    description: Unban a player
+    usage: /unban <player>
+    permission: standcore.unban
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: standcore.unmute
+
+permissions:
+  standcore.admin:
+    description: Gives access to all StandCore commands
+    default: op
+    children:
+      standcore.grant: true
+      standcore.grantshistory: true
+      standcore.staff: true
+      standcore.adminchat: true
+      standcore.ban: true
+      standcore.mute: true
+      standcore.kick: true
+      standcore.warn: true
+      standcore.unban: true
+      standcore.unmute: true
+  standcore.grant:
+    description: Allows granting ranks to players
+    default: op
+  standcore.grantshistory:
+    description: Allows viewing grant history
+    default: op
+  standcore.staff:
+    description: Allows using staff mode
+    default: op
+    children:
+      standcore.staff.vanish: true
+      standcore.staff.freeze: true
+      standcore.staff.invsee: true
+  standcore.staff.vanish:
+    description: Allows using vanish in staff mode
+    default: op
+  standcore.staff.freeze:
+    description: Allows freezing players
+    default: op
+  standcore.staff.invsee:
+    description: Allows viewing player inventories
+    default: op
+  standcore.adminchat:
+    description: Allows using admin chat
+    default: op
+    children:
+      standcore.adminchat.see: true
+  standcore.adminchat.see:
+    description: Allows seeing admin chat messages
+    default: op
+  standcore.ban:
+    description: Allows banning players
+    default: op
+  standcore.mute:
+    description: Allows muting players
+    default: op
+  standcore.kick:
+    description: Allows kicking players
+    default: op
+  standcore.warn:
+    description: Allows warning players
+    default: op
+  standcore.unban:
+    description: Allows unbanning players
+    default: op
+  standcore.unmute:
+    description: Allows unmuting players
+    default: op
