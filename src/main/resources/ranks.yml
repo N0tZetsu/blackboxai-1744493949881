@@ -1,0 +1,129 @@
+# StandCore Ranks Configuration
+
+ranks:
+  owner:
+    name: 'Owner'
+    prefix: '&4[Owner]'
+    weight: 1000
+    inheritance:
+      - admin
+    permissions:
+      - standcore.admin.*
+      - standcore.*
+    icon:
+      material: DIAMOND
+      name: '&4Owner Rank'
+      lore:
+        - '&7The highest rank on the server'
+        - '&7Includes all permissions'
+        - ''
+        - '&eClick to select'
+      glow: true
+
+  admin:
+    name: 'Admin'
+    prefix: '&c[Admin]'
+    weight: 900
+    inheritance:
+      - mod
+    permissions:
+      - standcore.admin
+      - standcore.grant.*
+      - standcore.staff.*
+      - standcore.adminchat.*
+    icon:
+      material: EMERALD
+      name: '&cAdmin Rank'
+      lore:
+        - '&7Administrative rank with'
+        - '&7high-level permissions'
+        - ''
+        - '&eClick to select'
+      glow: true
+
+  mod:
+    name: 'Moderator'
+    prefix: '&2[Mod]'
+    weight: 800
+    inheritance:
+      - helper
+    permissions:
+      - standcore.staff
+      - standcore.mute
+      - standcore.kick
+      - standcore.warn
+      - standcore.freeze
+      - standcore.invsee
+    icon:
+      material: GOLDEN_SWORD
+      name: '&2Moderator Rank'
+      lore:
+        - '&7Moderation rank with'
+        - '&7basic staff permissions'
+        - ''
+        - '&eClick to select'
+      glow: false
+
+  helper:
+    name: 'Helper'
+    prefix: '&a[Helper]'
+    weight: 700
+    inheritance:
+      - vip
+    permissions:
+      - standcore.staff
+      - standcore.warn
+      - standcore.adminchat.see
+    icon:
+      material: BOOK
+      name: '&aHelper Rank'
+      lore:
+        - '&7Basic staff rank with'
+        - '&7limited permissions'
+        - ''
+        - '&eClick to select'
+      glow: false
+
+  vip:
+    name: 'VIP'
+    prefix: '&6[VIP]'
+    weight: 500
+    inheritance:
+      - default
+    permissions:
+      - standcore.vip
+    icon:
+      material: GOLD_INGOT
+      name: '&6VIP Rank'
+      lore:
+        - '&7Special rank with'
+        - '&7exclusive features'
+        - ''
+        - '&eClick to select'
+      glow: false
+
+  default:
+    name: 'Default'
+    prefix: '&7'
+    weight: 100
+    inheritance: []
+    permissions:
+      - standcore.default
+    icon:
+      material: STONE
+      name: '&7Default Rank'
+      lore:
+        - '&7Basic player rank'
+        - '&7with standard permissions'
+        - ''
+        - '&eClick to select'
+      glow: false
+
+# Rank Settings
+settings:
+  inheritance-enabled: true
+  default-rank: default
+  format:
+    chat: '%prefix% %player%: %message%'
+    tablist: '%prefix% %player%'
+  sort-by-weight: true
