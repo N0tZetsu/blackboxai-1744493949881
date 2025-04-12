@@ -1,0 +1,80 @@
+# StandCore Configuration File
+
+# Database Settings
+database:
+  type: YAML  # Currently only YAML is supported
+  mysql:      # Reserved for future use
+    host: localhost
+    port: 3306
+    database: standcore
+    username: root
+    password: ''
+
+# Plugin Settings
+settings:
+  prefix: '&8[&bStandCore&8]'
+  date-format: 'dd/MM/yyyy HH:mm:ss'
+  
+  # Staff Mode Settings
+  staff-mode:
+    enabled: true
+    join-with-staff-mode: false
+    staff-chat-format: '&4[STAFF] &c%player%: &7%message%'
+    tools:
+      - COMPASS:1:&cTeleport Tool
+      - BOOK:1:&cInspection Tool
+      - BLAZE_ROD:1:&cFreeze Tool
+      - BARRIER:1:&cVanish Tool
+    
+  # Grant Settings
+  grants:
+    default-durations:
+      - 1h
+      - 1d
+      - 1w
+      - 1mo
+      - permanent
+    custom-duration-allowed: true
+    gui:
+      title: '&8Grant Menu'
+      duration-title: '&8Select Duration'
+      confirm-title: '&8Confirm Grant'
+    
+  # Sanction Settings
+  sanctions:
+    broadcast-bans: true
+    broadcast-mutes: true
+    broadcast-kicks: true
+    broadcast-warns: false
+    
+    formats:
+      ban-broadcast: '%prefix% &c%player% &7has been banned by &c%staff% &7for &c%reason%'
+      mute-broadcast: '%prefix% &c%player% &7has been muted by &c%staff% &7for &c%reason%'
+      kick-broadcast: '%prefix% &c%player% &7has been kicked by &c%staff% &7for &c%reason%'
+      warn-broadcast: '%prefix% &c%player% &7has been warned by &c%staff% &7for &c%reason%'
+      
+    ban-screen:
+      - '&c&lYou are banned from this server!'
+      - '&7'
+      - '&7Banned by: &c%staff%'
+      - '&7Reason: &c%reason%'
+      - '&7Expires: &c%expires%'
+      - '&7'
+      - '&7Appeal at: &cwww.example.com'
+
+# GUI Settings
+gui:
+  fill-empty-slots: true
+  fill-material: BLACK_STAINED_GLASS_PANE
+  back-button:
+    material: ARROW
+    name: '&cGo Back'
+  close-button:
+    material: BARRIER
+    name: '&cClose'
+  next-page:
+    material: ARROW
+    name: '&aNext Page'
+  previous-page:
+    material: ARROW
+    name: '&aPrevious Page'
