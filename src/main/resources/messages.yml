@@ -1,0 +1,106 @@
+# StandCore Messages Configuration
+
+prefix: '&8[&bStandCore&8]'
+
+general:
+  no-permission: '%prefix% &cYou don''t have permission to do this!'
+  player-not-found: '%prefix% &cPlayer not found!'
+  player-only: '%prefix% &cThis command can only be used by players!'
+  invalid-duration: '%prefix% &cInvalid duration format! Use: 1d, 1w, 1mo, etc.'
+  invalid-args: '%prefix% &cInvalid arguments! Usage: %usage%'
+  target-not-online: '%prefix% &cTarget player must be online!'
+  cannot-target-self: '%prefix% &cYou cannot target yourself!'
+  cannot-target-higher-rank: '%prefix% &cYou cannot target a player with a higher rank!'
+
+grants:
+  granted-rank: '%prefix% &aSuccessfully granted &e%rank% &ato &e%player% &afor &e%duration%'
+  received-rank: '%prefix% &aYou received the rank &e%rank% &afor &e%duration%'
+  permanent: 'permanent'
+  temporary: '%time%'
+  history-header: '&8=== &bGrant History for %player% &8==='
+  history-entry: '&7- &e%rank% &7by &e%granter% &7for &e%duration% &7on &e%date%'
+  history-empty: '%prefix% &cNo grant history found for this player!'
+  gui:
+    select-rank: '&aSelect a rank to grant'
+    select-duration: '&aSelect duration for &e%rank%'
+    confirm: '&aConfirm grant of &e%rank% &afor &e%duration%'
+    custom-duration: '&aType duration in chat (e.g., 1d, 1w, 1mo)'
+
+staff:
+  mode-enabled: '%prefix% &aStaff mode enabled!'
+  mode-disabled: '%prefix% &cStaff mode disabled!'
+  vanish-enabled: '%prefix% &aVanish enabled! You are now invisible.'
+  vanish-disabled: '%prefix% &cVanish disabled! You are now visible.'
+  player-frozen: '%prefix% &c%player% has been frozen!'
+  player-unfrozen: '%prefix% &a%player% has been unfrozen!'
+  you-are-frozen: |
+    &c&lYOU ARE FROZEN!
+    &7You have been frozen by &c%staff%
+    &7Please do not disconnect
+    &7Join our Discord if needed: &bdiscord.example.com
+  you-are-unfrozen: '%prefix% &aYou have been unfrozen by %staff%!'
+  invsee-opened: '%prefix% &aOpened inventory of &e%player%'
+  tools:
+    teleport: '&cTeleport Tool &7(Right-click)'
+    freeze: '&cFreeze Tool &7(Right-click player)'
+    inspect: '&cInspection Tool &7(Right-click)'
+    vanish: '&cVanish Tool &7(Right-click)'
+
+admin-chat:
+  format: '&4[STAFF] &c%player%: &7%message%'
+  toggled-on: '%prefix% &aAdmin chat enabled!'
+  toggled-off: '%prefix% &cAdmin chat disabled!'
+  direct-message: '&4[STAFF] &c%player% &7→ &c%target%&7: %message%'
+
+sanctions:
+  ban:
+    success: '%prefix% &c%player% &7has been banned by &c%staff% &7for &c%reason%'
+    broadcast: '%prefix% &c%player% &7was banned by &c%staff%'
+    screen: |
+      &c&lYou are banned from this server!
+      &7
+      &7Banned by: &c%staff%
+      &7Reason: &c%reason%
+      &7Duration: &c%duration%
+      &7Expires: &c%expires%
+      &7
+      &7Appeal at: &cdiscord.example.com
+  mute:
+    success: '%prefix% &c%player% &7has been muted by &c%staff% &7for &c%reason%'
+    broadcast: '%prefix% &c%player% &7was muted by &c%staff%'
+    message: |
+      %prefix% &cYou are muted!
+      &7Duration: &c%duration%
+      &7Reason: &c%reason%
+  kick:
+    success: '%prefix% &c%player% &7has been kicked by &c%staff%'
+    broadcast: '%prefix% &c%player% &7was kicked by &c%staff%'
+    screen: |
+      &c&lYou have been kicked!
+      &7
+      &7Kicked by: &c%staff%
+      &7Reason: &c%reason%
+  warn:
+    success: '%prefix% &c%player% &7has been warned by &c%staff%'
+    broadcast: '%prefix% &c%player% &7was warned by &c%staff%'
+    message: |
+      %prefix% &cYou have been warned!
+      &7Warned by: &c%staff%
+      &7Reason: &c%reason%
+  unban:
+    success: '%prefix% &a%player% &7has been unbanned by &a%staff%'
+    broadcast: '%prefix% &a%player% &7was unbanned by &a%staff%'
+    not-banned: '%prefix% &c%player% is not banned!'
+  unmute:
+    success: '%prefix% &a%player% &7has been unmuted by &a%staff%'
+    broadcast: '%prefix% &a%player% &7was unmuted by &a%staff%'
+    not-muted: '%prefix% &c%player% is not muted!'
+
+gui:
+  common:
+    back: '&cGo Back'
+    close: '&cClose'
+    next-page: '&aNext Page'
+    previous-page: '&aPrevious Page'
+    confirm: '&aConfirm'
+    cancel: '&cCancel'
